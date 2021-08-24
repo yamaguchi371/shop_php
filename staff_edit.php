@@ -19,7 +19,7 @@
             $dbh = new PDO($dsn, $user, $password);
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = 'SELECT code, name FROM mst_staff WHERE code=?';
+            $sql = 'SELECT name FROM mst_staff WHERE code=?';
             $stmt = $dbh->prepare($sql);
             $data[]=$staff_code;
             $stmt->execute($data);
@@ -34,11 +34,11 @@
             exit();
         }
     ?>
-    <p>スタッフ紹介<br>
+    <p>スタッフ修正<br>
 <br>スタッフコード<br>
 <?php print $staff_code; ?><br><br></p>
 <form method="post" action="staff_edit_check.php">
-    <input type="hidden" name="code" value="<php print $staff_code; ?>">
+    <input type="hidden" name="code" value="<?php print $staff_code; ?>">
     <p>スタッフ名</p>
     <input type="text" name="name" style="width: 200px;" value="<?php print $staff_name; ?>"><br>
     <p>パスワードを入力してください。</p><br>
