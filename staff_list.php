@@ -7,6 +7,7 @@
     <title>ろくまる農園</title>
 </head>
 <body>
+    <div class="container">
     <?php
         try {
             
@@ -44,5 +45,6 @@
             exit();
         }
     ?>
+    </div>
 </body>
 </html>

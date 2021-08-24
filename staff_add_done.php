@@ -7,6 +7,7 @@
     <title>ろくまる農園</title>
 </head>
 <body>
+    <div class="container">
     <?php
         try {
             $staff_name = $_POST['name'];
@@ -38,5 +39,6 @@
     ?>
 
     <a href="staff_list.php">戻る</a>
+    </div>
 </body>
 </html>

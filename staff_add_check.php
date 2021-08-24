@@ -7,6 +7,7 @@
     <title>ろくまる農園</title>
 </head>
 <body>
+    <div class="container">
     <?php
         $staff_name=$_POST['name'];
         $staff_pass=$_POST['pass'];
@@ -43,8 +44,10 @@
             print '<input type="hidden" name="pass" value="'.$staff_pass.'">';
             print '<br>';
             print '<input type="button" onclick="history.back()" value="戻る">';
+            print '<input type="submit" value="OK">';
             print '</form>';
         }
     ?>
+    </div>
 </body>
 </html>
